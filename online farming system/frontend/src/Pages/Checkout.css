@@ -1,0 +1,11 @@
+.language-toggle {
+    float: right;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  

@@ -1,0 +1,155 @@
+.fertilizer-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.lang-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.lang-toggle:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin: 4rem 0 2rem 0;
+  font-size: 2.5rem;
+}
+
+.fertilizer-list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding-top: 1rem;
+}
+
+.fertilizer-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fertilizer-card:hover {
+  transform: translateY(-5px);
+}
+
+.fertilizer-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #4CAF50;
+}
+
+.fertilizer-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.fertilizer-content h2 {
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 0.5rem;
+}
+
+.description {
+  color: #34495e;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.info-section {
+  margin-bottom: 1.5rem;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  flex-grow: 1;
+}
+
+.info-section:last-child {
+  margin-bottom: 0;
+}
+
+.info-section h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 0.5rem;
+}
+
+.info-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-section li {
+  color: #34495e;
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.info-section li::before {
+  content: "•";
+  color: #4CAF50;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .fertilizer-container {
+    padding: 1rem;
+  }
+
+  .fertilizer-list {
+    grid-template-columns: 1fr;
+  }
+
+  .lang-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+
+  h1 {
+    margin: 3rem 0 1.5rem 0;
+    font-size: 2rem;
+  }
+
+  .fertilizer-card img {
+    height: 180px;
+  }
+}

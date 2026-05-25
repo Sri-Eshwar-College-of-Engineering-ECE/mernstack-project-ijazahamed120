@@ -1,0 +1,60 @@
+.guava-container {
+    background-color: white;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .lang-toggle {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .guava-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border-radius: 8px;
+  }
+  
+  .guava-desc {
+    font-size: 1.4rem;
+    margin: 1.5rem 0;
+    line-height: 1.8;
+  }
+  
+  p {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    line-height: 1.7;
+  }
+  
+  .guava-products {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 2rem;
+  }
+  
+  .guava-products img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  

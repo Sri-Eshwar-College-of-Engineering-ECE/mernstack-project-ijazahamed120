@@ -1,0 +1,54 @@
+.disease-info-page {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.selectors {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.selectors label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #234d2d;
+}
+
+select {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #cfe6d0;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: #f8fbf6;
+  border: 1px solid #dbeeda;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #1f5a2e;
+}
+
+.no-data {
+  color: #6b6b6b;
+}
+
+@media (max-width: 800px) {
+  .info-cards { grid-template-columns: 1fr; }
+  .selectors { flex-direction: column; align-items: stretch; }
+}

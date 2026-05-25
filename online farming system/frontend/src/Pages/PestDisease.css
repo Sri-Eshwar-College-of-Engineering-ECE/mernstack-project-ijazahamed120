@@ -1,0 +1,469 @@
+.pest-page {
+  padding: 20px;
+  max-width: 1220px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.pest-hero-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  background: linear-gradient(135deg, #ebf6e7 0%, #d4ecd3 100%);
+  border: 1px solid #b8d9b5;
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 30px;
+}
+
+.pest-hero-text h1 {
+  font-size: 2.8rem;
+  margin: 0 0 14px;
+  color: #1e4e2e;
+}
+
+.pest-hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #355d38;
+  margin-bottom: 24px;
+  max-width: 640px;
+}
+
+.indicator {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 8px 16px;
+  background: #d2f2d0;
+  color: #2f6d38;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.pest-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pest-hero-actions button {
+  background: #1d6c2d;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  min-width: 170px;
+}
+
+.pest-hero-actions button:hover {
+  background: #155021;
+}
+
+.pest-hero-image {
+  min-height: 260px;
+  border-radius: 22px;
+  background-image: url("https://img.freepik.com/free-photo/farming-hands-holding-plant_1150-15646.jpg?w=900&t=st=1700000000~exp=1700000600~hmac=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.upload-section {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.upload-panel,
+.info-panel {
+  background: #ffffff;
+  border: 1px solid #d4e7d3;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.panel-title {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: #22512b;
+}
+
+.upload-controls {
+  display: grid;
+  gap: 16px;
+}
+
+.upload-placeholder {
+  min-height: 220px;
+  border: 2px dashed #b6d2b5;
+  background: #f6fbf4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f6f4b;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.image-preview-card {
+  display: grid;
+  gap: 16px;
+}
+
+.image-preview-card img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  min-height: 240px;
+}
+
+.preview-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.preview-actions button,
+.supported-formats,
+.detect-button {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.preview-actions button {
+  background: #eef8ed;
+  color: #2f5f34;
+}
+
+.supported-formats {
+  background: #f9fdf8;
+  color: #3f6a47;
+  font-size: 0.95rem;
+}
+
+.crop-selection {
+  margin-top: 20px;
+}
+
+.crop-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.crop-card {
+  background: #f4faf1;
+  border: 1px solid #c9ddb9;
+  color: #27532f;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.crop-card.active,
+.crop-card:hover {
+  background: #d7efd6;
+  transform: translateY(-2px);
+}
+
+.detect-area {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detect-button {
+  background: #1e7b35;
+  color: #ffffff;
+  width: fit-content;
+  font-weight: 700;
+}
+
+.detect-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.info-box,
+.emergency-box {
+  background: #f2fbf1;
+  border-radius: 18px;
+  border: 1px solid #c6e5c0;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.info-box h2,
+.emergency-box h3 {
+  margin-top: 0;
+  color: #22512b;
+}
+
+.info-box p,
+.emergency-box p {
+  line-height: 1.7;
+  margin: 12px 0;
+  color: #3d593c;
+}
+
+.emergency-box a {
+  color: #124018;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.loading-panel,
+.result-panel,
+.history-panel {
+  background: #ffffff;
+  border: 1px solid #d4e7d3;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 30px;
+}
+
+.loader {
+  width: 70px;
+  height: 70px;
+  border: 8px solid #d7ecd9;
+  border-top: 8px solid #1e7b35;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-panel h2 {
+  text-align: center;
+  color: #1f5a2e;
+  margin-bottom: 18px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #f3f7f2;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #1e7b35 0%, #7bc17a 100%);
+  animation: loadProgress 1.6s ease-out forwards;
+}
+
+@keyframes loadProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.result-tag {
+  display: inline-block;
+  background: #e5f6de;
+  color: #24712f;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.result-header h1 {
+  font-size: 2rem;
+  margin: 0 0 10px;
+  color: #1b4a27;
+}
+
+.confidence {
+  font-weight: 700;
+  color: #2f7c3c;
+}
+
+.language-switch button {
+  margin-left: 12px;
+  background: #eef8ed;
+  border: 1px solid #c5e2c0;
+  color: #2f6d38;
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.language-switch button:first-child {
+  margin-left: 0;
+}
+
+.result-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+}
+
+.result-card {
+  background: #f8fbf6;
+  border: 1px solid #dce9d7;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.result-card h3 {
+  margin-top: 0;
+  color: #216032;
+}
+
+.result-card img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.result-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.result-card li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+  color: #3c593e;
+}
+
+.severity-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.severity-pill {
+  display: inline-flex;
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: white;
+  font-weight: 700;
+}
+
+.result-actions {
+  margin-top: 22px;
+}
+
+.result-actions button {
+  background: #1e7b35;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.history-panel h2 {
+  margin-top: 0;
+  color: #1f5a2e;
+}
+
+.history-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+}
+
+.history-card {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 14px;
+  align-items: center;
+  border: 1px solid #d4e7d3;
+  border-radius: 18px;
+  padding: 14px;
+  background: #f7faf5;
+}
+
+.history-card img {
+  width: 110px;
+  height: 82px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.history-card strong {
+  color: #1f5a2e;
+}
+
+.history-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.history-actions button {
+  background: #eef8ed;
+  border: 1px solid #c5e2c0;
+  color: #27532f;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .pest-hero-card,
+  .upload-section,
+  .result-grid,
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 700px) {
+  .pest-page {
+    padding: 16px;
+  }
+
+  .pest-hero-card {
+    padding: 24px;
+  }
+
+  .pest-hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .pest-hero-actions button,
+  .result-actions button,
+  .history-actions button {
+    width: 100%;
+  }
+}

@@ -13,7 +13,7 @@ function Products() {
       name: "Organic Fertilizer",
       tamilName: "இயற்கை உரம்",
       price: 499,
-      image: "https://www.jiomart.com/images/product/original/rvbak9fiha/only-for-organic-steamed-bone-meal-organic-fertilizer-npk-3-15-0-rich-in-phosphorus-and-calcium-for-healthy-plant-and-soil-product-images-orvbak9fiha-p596355194-3-202212141151.jpg?im=Resize=(420,420)",
+      image: "/organic_fertilizer.jpg",
       description: "High-quality organic fertilizer for better crop yield",
       tamilDescription: "சிறந்த பயிர் மகசூலுக்கான உயர்தர இயற்கை உரம்"
     },

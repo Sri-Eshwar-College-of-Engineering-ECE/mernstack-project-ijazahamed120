@@ -1,119 +1,265 @@
+/* Premium Modern Warm Bronze-Glassmorphism Reset & Styles */
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #04214d, #8DC26F);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 400px;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 1s ease-out;
-    text-align: center;
-    position: relative;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  h2 {
-    color: #2d572c;
-    margin-bottom: 20px;
-    font-size: 28px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  input {
-    padding: 12px;
-    margin-bottom: 18px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 15px;
-    transition: 0.3s;
-  }
-  
-  input:focus {
-    border-color: #76b852;
-    outline: none;
-    box-shadow: 0 0 8px rgba(118, 184, 82, 0.3);
-  }
-  
-  button {
-    padding: 12px;
-    background-color: #2f6e2f;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #245a24;
-  }
-  
-  p {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-  
-  .link {
-    color: #140131;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s;
-  }
-  
-  .link:hover {
-    text-decoration: underline;
-  }
-  /* Center the login/signup page */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: #120e0a;
+}
+
+/* Full-screen Background with Golden Wheat */
 .background {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(to right, #04214d, #8DC26F);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  justify-content: center; /* Center the card horizontally */
+  align-items: center; /* Center the card vertically */
+  background: url('/agriculture_login_bg.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
 }
 
-/* Container styling (already correct) */
-.container {
+/* Warm Golden/Brown overlay for rich contrast and depth */
+.background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(28, 20, 10, 0.35) 0%, rgba(28, 20, 10, 0.72) 100%);
+  z-index: 0;
+}
+
+/* Premium Symmetrical Warm Bronze Glassmorphic Card (Matches Golden Background) */
+.organic-card {
+  position: relative;
   width: 100%;
-  max-width: 400px;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 15px;
-  padding: 40px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 1s ease-out;
-  text-align: center;
+  max-width: 400px; /* Reduced width */
+  background: rgba(30, 22, 12, 0.82); /* Warm translucent dark-bronze/amber */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 215, 150, 0.15); /* Subtle warm glowing border */
+  border-radius: 24px; /* Sleeker rounded corners */
+  padding: 32px 36px; /* Reduced padding to save vertical space */
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.65), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  z-index: 2;
+  animation: slideInUp 800ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Add the rest of your input, button, etc. styling here... */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo Header */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px; /* Reduced margin */
+}
+
+.leaf-logo {
+  width: 28px; /* Smaller logo */
+  height: 28px;
+}
+
+/* Update leaf SVG path colors to warm tones */
+.leaf-logo path {
+  fill: #FFB74D !important;
+  stroke: #D84315 !important;
+}
+
+.logo-text {
+  font-size: 18px; /* Smaller text */
+  font-weight: 800;
+  color: #FFB74D; /* Warm golden color */
+  letter-spacing: -0.5px;
+}
+
+/* Headings & Text */
+.form-section h1 {
+  font-size: 25px; /* Smaller heading */
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.8px;
+}
+
+.subtitle {
+  font-size: 13px; /* Slightly smaller subtitle */
+  color: #d7ccc8; /* Warm off-white/sage text */
+  margin: 0 0 20px 0; /* Reduced margin */
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Input Fields */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px; /* Reduced vertical spacing between inputs */
+}
+
+.input-group label {
+  font-size: 10px; /* Smaller label */
+  font-weight: 800;
+  color: #FFB74D; /* Golden label */
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding-left: 2px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 14px; /* Slimmer inputs */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px; /* Sleeker rounded input */
+  font-size: 13.5px; /* Smaller font */
+  background-color: rgba(255, 255, 255, 0.05); /* Warm translucent input */
+  color: #ffffff;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.input-group input:focus {
+  border-color: #FFB74D;
+  background-color: rgba(255, 255, 255, 0.08);
+  outline: none;
+  box-shadow: 0 0 12px rgba(255, 183, 77, 0.2);
+}
+
+/* Browser autofill styling override to avoid ugly blue background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(30, 22, 12, 0.95) inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Form Options & Checkbox */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px; /* Reduced spacing */
+  font-size: 12.5px; /* Smaller font */
+  font-weight: 600;
+  padding: 0 2px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d7ccc8;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Customize checkbox color */
+.checkbox-container input {
+  accent-color: #FFB74D;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.forgot-password {
+  color: #FFB74D;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+  color: #ffe0b2;
+  text-decoration: underline;
+}
+
+/* Submit Button with Golden/Terracotta Warm Gradient */
+.login-btn {
+  width: 100%;
+  padding: 11px; /* Slimmer button height */
+  background: linear-gradient(135deg, #d84315 0%, #ff8f00 100%); /* Rich warm bronze/gold gradient */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14.5px; /* Slightly smaller button font */
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(216, 67, 21, 0.35);
+  transition: all 0.22s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(216, 67, 21, 0.5);
+}
+
+.login-btn:active {
+  transform: translateY(1px);
+}
+
+/* Footer Link styling */
+.footer-text {
+  text-align: center;
+  margin-top: 18px; /* Reduced spacing */
+  font-size: 13px; /* Smaller footer link */
+  color: #d7ccc8;
+  font-weight: 500;
+}
+
+.footer-text .link {
+  color: #FFB74D;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-text .link:hover {
+  color: #ffe0b2;
+  text-decoration: underline;
+}
+
+/* Error Alerts */
+.error-alert {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .background {
+    justify-content: center;
+    padding-right: 0;
+    padding: 20px;
+  }
+  .organic-card {
+    padding: 36px 24px;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Vegetables from "./Pages/Vegetables";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
@@ -30,64 +30,19 @@ import About from "./Pages/About";
 import CustomerCare from "./Pages/CustomerCare";
 import DiseaseInfo from "./Pages/DiseaseInfo";
 import PestDisease from "./Pages/PestDisease";
-
-function BackButton() {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const currentPath = location.pathname.toLowerCase();
-  if (currentPath === "/" || currentPath === "/profile" || currentPath === "/dashboard") {
-    return null;
-  }
-
-  const handleBack = () => {
-    if (window.history.length > 1) {
-      navigate(-1);
-    } else {
-      navigate("/dashboard");
-    }
-  };
-
-  const backButtonStyle = {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "0.45rem",
-    margin: "1.2rem 1rem 0.6rem 1rem",
-    padding: "0.05rem 0",
-    border: "none",
-    backgroundColor: "transparent",
-    color: "#1f2937",
-    fontSize: "1rem",
-    fontWeight: 600,
-    cursor: "pointer",
-    lineHeight: 1.2,
-  };
-
-  const arrowStyle = {
-    color: "#2463e9",
-    fontSize: "1.45rem",
-    lineHeight: 1,
-    display: "inline-flex",
-    alignItems: "center",
-    fontFamily: "Arial, sans-serif",
-  };
-
-  return (
-    <button style={backButtonStyle} onClick={handleBack}>
-      <span style={arrowStyle}>⟵</span> Back
-    </button>
-  );
-}
+import MarketPrices from "./Pages/MarketPrices";
+import YieldEstimator from "./Pages/YieldEstimator";
 
 function App() {
   return (
     <Router>
-      <BackButton />
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/market-prices" element={<MarketPrices />} />
+        <Route path="/yield-estimator" element={<YieldEstimator />} />
         <Route path="/products" element={<Products />} />
         <Route path="/checkout" element={<OrderCheckout />} />
         <Route path="/Vegetables" element={<Vegetables />} />

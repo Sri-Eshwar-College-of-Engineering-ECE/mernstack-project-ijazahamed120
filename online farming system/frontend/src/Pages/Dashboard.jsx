@@ -3,14 +3,28 @@ import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
 function Dashboard() {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState(localStorage.getItem("preferredLanguage") || "en");
   const [userData, setUserData] = useState({});
+  const [showDropdown, setShowDropdown] = useState(false);
   const navigate = useNavigate();
+
+  const toggleLanguage = () => {
+    const nextLang = language === "en" ? "ta" : "en";
+    setLanguage(nextLang);
+    localStorage.setItem("preferredLanguage", nextLang);
+  };
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("userProfile"));
     setUserData(data || {});
   }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("userProfile");
+    localStorage.removeItem("userEmail");
+    localStorage.removeItem("userName");
+    navigate("/");
+  };
 
   const handleNavigation = (path) => {
     if (path === "/dashboard") {
@@ -76,6 +90,8 @@ function Dashboard() {
           <li onClick={() => handleNavigation("/dashboard")}>Home</li>
           <li onClick={() => handleNavigation("/products")}>Products</li>
           <li onClick={() => handleNavigation("/weather")}>Weather Forecasting</li>
+          <li onClick={() => handleNavigation("/market-prices")}>Market Prices</li>
+          <li onClick={() => handleNavigation("/yield-estimator")}>Yield Estimator</li>
           <li onClick={() => handleNavigation("/about")}>About</li>
           <li onClick={() => handleNavigation("/customer-care")}>Customer Care</li>
         </ul>
@@ -90,11 +106,27 @@ function Dashboard() {
       <div className="overlay-content">
         <div className="dashboard-header">
           <h1 className="welcome-title">{lang.welcome}</h1>
-          <div className="profile-info">
-            {userData.profilePic && (
-              <img src={userData.profilePic} alt="Profile" className="profile-pic" />
+          <div className="profile-container-wrapper">
+            <div className="profile-info" onClick={() => setShowDropdown(!showDropdown)} style={{ cursor: "pointer" }}>
+              <img 
+                src={userData.profilePic || "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"} 
+                alt="Profile" 
+                className="profile-pic" 
+              />
+              <p className="profile-name">{userData.name || "Farmer"}</p>
+            </div>
+
+            {showDropdown && (
+              <div className="profile-dropdown">
+                <h3>Profile Details</h3>
+                <div className="dropdown-item"><strong>Name:</strong> {userData.name}</div>
+                <div className="dropdown-item"><strong>Email:</strong> {userData.email}</div>
+                <div className="dropdown-item"><strong>Age:</strong> {userData.age || "N/A"}</div>
+                <div className="dropdown-item"><strong>Mobile:</strong> {userData.mobile || "N/A"}</div>
+                <hr className="dropdown-divider" />
+                <button className="logout-btn" onClick={handleLogout}>Logout</button>
+              </div>
             )}
-            <p className="profile-name">{userData.name}</p>
           </div>
         </div>
 
@@ -120,12 +152,7 @@ function Dashboard() {
             </div>
           </div>
 
-          <div className="pest-disease-card" onClick={() => navigate("/pest-disease")}> 
-            <h2>{lang.pestTitle}</h2>
-            <p>{lang.pestDesc1}</p>
-            <p>{lang.pestDesc2}</p>
-            <p>{lang.pestDesc3}</p>
-          </div>
+
 
           <button
             className="lang-toggle"
